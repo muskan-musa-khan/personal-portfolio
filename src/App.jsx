@@ -13,7 +13,7 @@ const App = () => {
   const { theme } = useContext(ThemeContext);
   return (
     <div
-      className={`h-screen overflow-hidden w-screen transition-all duration-500 pt-10
+      className={`h-screen overflow-hidden w-screen  pt-10
         ${theme === "dark" ? "bg-black text-white" : "bg-white text-black"}`}
     >
       <Navbar />

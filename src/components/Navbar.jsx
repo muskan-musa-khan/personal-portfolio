@@ -1,108 +1,172 @@
 import React, { useContext, useState } from "react";
-import { Link } from "react-router-dom";
-import { FaSun, FaMoon } from "react-icons/fa";
+import { FaMoon } from "react-icons/fa";
+import { MdSunny } from "react-icons/md";
 import { ThemeContext } from "../context/ThemeContext";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { RxCross2 } from "react-icons/rx";
+
 const Navbar = () => {
   const { theme, toggleTheme } = useContext(ThemeContext);
   const [isOpen, setIsOpen] = useState(false);
-  const hamClicked = () => {
-    setIsOpen(!isOpen);
-  };
+
+  //  Active link state
+  const [active, setActive] = useState("home");
+
+  const menuItemClass = (id) =>
+    `cursor-pointer transition-all duration-300 hover:text-teal-400 hover:scale-110 
+     ${active === id ? "text-teal-500 font-bold" : ""}`;
+
   return (
     <>
       <nav
-        className={`relative flex justify-between items-center px-4 py-4  lg:ml-32 lg:mr-32 rounded-full 
-  transition-all duration-700 ease-in-out hover:scale-[1.03]
-  shadow-[0_0_25px_rgba(20,184,166,0.7)] hover:shadow-[0_0_45px_rgba(20,184,166,1)]
-  ${theme === "dark" ? "bg-black text-white" : "bg-white text-black"} 
-  `} 
+        className={`fixed flex flex-col md:flex-row min-h-[60px] inset-x-0 md:inset-x-10 top-0 rounded-xl 
+        justify-between items-center  md:px-10 md:rounded-full z-50  transition-all duration-700 ease-in-out hover:scale-[1.03] overflow-hidden
+        shadow-[0_0_25px_rgba(20,184,166,0.7)] hover:shadow-[0_0_45px_rgba(20,184,166,1)] 
+        ${theme === "dark" ? "bg-black text-white" : "bg-white text-black"}
+        
+        `}
       >
-        <h1 className="logo">MMK Logo</h1>
+        <div className="flex flex-row items-center justify-around w-full md:w-auto">
+          <img
+            src="./src/assets/logo2.png"
+            alt="logo"
+            className="h-16 w-20 object-contain mr-30 sm:mr-0"
+          />
+
+          {!isOpen && (
+            <button
+              className="md:hidden text-3xl text-teal-600  "
+              onClick={() => setIsOpen(true)}
+            >
+              <GiHamburgerMenu />
+            </button>
+          )}
+
+          {isOpen && (
+            <button
+              onClick={() => setIsOpen(false)}
+              className="md:hidden text-3xl text-teal-600"
+            >
+              <RxCross2 />
+            </button>
+          )}
+        </div>
+
         <ul
-          className={`md:flex md:flex-row gap-8 pl-30 ${
-            isOpen ? "flex-col" : "hidden"
-          }`}  /*translate-x-0 translate-x-full bottom */
+          className={`${
+            isOpen ? "flex" : "hidden"
+          } md:flex flex-col md:flex-row 
+          gap-10 items-center w-full md:w-auto  px-10`}
         >
-          <li
-            className="flex
-  cursor-pointer
-  transition-all duration-300
-  hover:text-teal-400
-  hover:scale-110
-"
-          >
-            <Link to="/">Home</Link>
+          {/* HOME */}
+          <li className={`${menuItemClass("home")}`}>
+            <button
+              className="cursor-pointer"
+              onClick={() => {
+                document
+                  .getElementById("home")
+                  .scrollIntoView({ behavior: "smooth" });
+                setActive("home");
+                setIsOpen(false);
+              }}
+            >
+              Home
+            </button>
           </li>
-          <li
-            className="flex
-  cursor-pointer
-  transition-all duration-300
-  hover:text-teal-400
-  hover:scale-110
-"
-          >
-            <Link to="/about">About</Link>
+
+          {/* ABOUT */}
+          <li className={menuItemClass("about")}>
+            <button
+              className="cursor-pointer"
+              onClick={() => {
+                document
+                  .getElementById("about")
+                  .scrollIntoView({ behavior: "smooth" });
+                setActive("about");
+                setIsOpen(false);
+              }}
+            >
+              About
+            </button>
           </li>
-          <li
-            className="flex
-  cursor-pointer
-  transition-all duration-300
-  hover:text-teal-400
-  hover:scale-110
-"
-          >
-            <Link to="/projects">Projects</Link>
+
+          {/* PROJECTS */}
+          <li className={menuItemClass("projects")}>
+            <button
+              className="cursor-pointer"
+              onClick={() => {
+                document
+                  .getElementById("projects")
+                  .scrollIntoView({ behavior: "smooth" });
+                setActive("projects");
+                setIsOpen(false);
+              }}
+            >
+              Projects
+            </button>
           </li>
-          <li
-            className="flex
-  cursor-pointer
-  transition-all duration-300
-  hover:text-teal-400
-  hover:scale-110
-"
-          >
-            <Link to="/education">Education</Link>
+
+          {/* EDUCATION */}
+          <li className={menuItemClass("education")}>
+            <button
+              className="cursor-pointer"
+              onClick={() => {
+                document
+                  .getElementById("education")
+                  .scrollIntoView({ behavior: "smooth" });
+                setActive("education");
+                setIsOpen(false);
+              }}
+            >
+              Education
+            </button>
           </li>
-          <li
-            className="flex
-  cursor-pointer
-  transition-all duration-300
-  hover:text-teal-400
-  hover:scale-110
-"
-          >
-            <Link to="/skills">Skills</Link>
+
+          {/* SKILLS */}
+          <li className={menuItemClass("skills")}>
+            <button
+              className="cursor-pointer"
+              onClick={() => {
+                document
+                  .getElementById("skills")
+                  .scrollIntoView({ behavior: "smooth" });
+                setActive("skills");
+                setIsOpen(false);
+              }}
+            >
+              Skills
+            </button>
           </li>
-          <li
-            className="flex
-  cursor-pointer
-  transition-all duration-300
-  hover:text-teal-400
-  hover:scale-110
-"
-          >
-            <Link to="/contact">Contact</Link>
+
+          {/* CONTACT */}
+          <li className={menuItemClass("contact")}>
+            <button
+              className="cursor-pointer pb-8 md:pb-0"
+              onClick={() => {
+                document
+                  .getElementById("contact")
+                  .scrollIntoView({ behavior: "smooth" });
+                setActive("contact");
+                setIsOpen(false);
+              }}
+            >
+              Contact
+            </button>
           </li>
         </ul>
+
         <button
           onClick={toggleTheme}
-          className=" flex p-2 rounded-full text-teal-600 "
+          className="rounded-full text-teal-600 flex-row hidden md:block cursor-pointer
+"
         >
-          {theme === "dark" ? <FaSun size={18} /> : <FaMoon size={18} />}
+          {theme === "dark" ? <MdSunny size={18} /> : <FaMoon size={18} />}
         </button>
       </nav>
-      <div
-        onClick={hamClicked}
-        className=" absolute top-15  right-18  mr-3  md:hidden flex items-center text-teal-600"
-      >
-        {isOpen ? (
-          <RxCross2 className="text-2xl" />
-        ) : (
-          <GiHamburgerMenu size={25} />
-        )}
-      </div>
+
+      {isOpen && (
+        <div className="fixed inset-0 bg-black/30 backdrop-blur-sm z-40 md:hidden"></div>
+      )}
     </>
   );
 };

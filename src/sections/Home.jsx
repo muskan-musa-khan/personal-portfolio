@@ -5,20 +5,19 @@ import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa6";
 import { CgMail } from "react-icons/cg";
-import { useContext } from "react";
-import { ThemeContext } from "../context/ThemeContext";
+import myImg from "../assets/myimg.png";
 
 const Home = () => {
-  const { theme } = useContext(ThemeContext);
-  console.log(theme);
-
   return (
     <>
-      <div className=" flex flex-col item-center p-5  justify-center text-center sm:text-left
-      md:flex-row md:p-8 
-      lg:px-35 lg:py-20 lg:gap-60 lg:m-5  ">
+      <div
+        id={"home"}
+        className=" min-h-screen flex flex-col-reverse  items-center p-5  justify-center text-center lg:text-left
+      lg:flex-row md:p-6 
+      lg:px-32   "
+      >
         <div className="">
-          <h1 className="text-7xl font-bold pt-10 ">
+          <h1 className="text-7xl font-bold pt-3 lg:pt-20 h-auto w-auto ">
             <span className="">Hey, I'm </span>
             <span
               className="text-teal-600  [text-stroke:2px_#14b8a6]
@@ -37,12 +36,12 @@ const Home = () => {
             />
           </div>
 
-          <p className="md:mt-6 md:text-xl text-xl leading-relaxed ">
+          <p className="md:mt-6 md:text-xl text-xl leading-relaxed mr-auto lg:mr-40">
             Turning ideas into interactive digital experiences. Designing
             interfaces that feel effortless and intuitive. Bringing creativity
             and clean code together for the web you’ll love to use.
           </p>
-          <div className="mt-10 flex gap-2 justify-center md:justify-start ">
+          <div className="mt-10 flex gap-2 justify-center lg:justify-start ">
             <Button className="bg-teal-800 text-amber-50 rounded-md text-l border border-amber-50 hover:scale-95">
               View My Work
             </Button>
@@ -51,32 +50,36 @@ const Home = () => {
             </Button>
           </div>
           <div
-            className={`flex mt-8 text-3xl gap-2 justify-center md:justify-start ${
-              theme === "dark" ? "bg-black text-white" : "bg-white  text-black"
-            }`}
+            className={`flex mt-8 text-3xl gap-2 justify-center lg:justify-start`}
           >
-            <Button>
+            <Button variant="ghost" size="icon">
               <FaGithub className="hover:scale-110  " />
             </Button>
-            <Button className="hover:scale-110 ">
+            <Button variant="ghost" size="icon" className="hover:scale-110 ">
               <FaLinkedin />
             </Button>
-            <Button className="hover:scale-110 text-4xl">
+            <Button
+              variant="ghost"
+              size="icon"
+              className="hover:scale-110 text-4xl"
+            >
               {" "}
               <CgMail />
             </Button>
-            <Button className=" hover:scale-110 ">
+            <Button variant="ghost" size="icon" className=" hover:scale-110 ">
               {" "}
               <FaInstagram />
             </Button>
           </div>
         </div>
-        <div className=" flex md:w-82 md:h-82 sm:w-full sm:h-full  rounded-full p-1 bg-linear-to-tr from-teal-400 to-teal-700 shrink-0 ">
+        <div className="md:mt-12"><div className=" flex w-88 h-88 lg:w-96 lg:h-96   rounded-full p-1 bg-linear-to-tr from-teal-400 to-teal-700 shrink-0 mt-20 md:mt-0">
           <img
-            src="./src/assets/myphoto.jpg"
-            className="w-full h-full rounded-full object-cover border-8 border-teal-800
-    hover:scale-110 hover:shadow-[0_0_40px_#14b8a6] transition duration-500"
-          />
+            src={myImg}
+            className="w-auto h-auto rounded-full object-cover border-8 border-teal-800
+              hover:scale-110 hover:shadow-[0_0_40px_#14b8a6] transition duration-500 "
+            alt="Muskan profile picture"
+          /></div>
+        
         </div>
       </div>
     </>

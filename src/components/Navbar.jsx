@@ -19,8 +19,8 @@ const Navbar = () => {
   return (
     <>
       <nav
-        className={`fixed flex flex-col md:flex-row min-h-[60px] inset-x-0 md:inset-x-10 top-0 rounded-xl 
-        justify-between items-center  md:px-10 md:rounded-full z-50  transition-all duration-700 ease-in-out hover:scale-[1.03] overflow-hidden
+        className={`fixed flex flex-col md:flex-row min-h-[60px] inset-x-0 md:inset-x-10 top-0 
+        justify-between items-center  lg:px-10 md:rounded-full z-50  transition-all duration-700 ease-in-out hover:scale-[1.03] overflow-hidden
         shadow-[0_0_25px_rgba(20,184,166,0.7)] hover:shadow-[0_0_45px_rgba(20,184,166,1)] 
         ${theme === "dark" ? "bg-black text-white" : "bg-white text-black"}
         
@@ -52,18 +52,17 @@ const Navbar = () => {
           )}
         </div>
 
-    <ul
-  className={`${
-    isOpen
-      ? "flex opacity-100 max-h-96"
-      : "flex opacity-0 max-h-0 pointer-events-none"
-  }
+        <ul
+          className={`${
+            isOpen
+              ? "flex opacity-100 max-h-96"
+              : "flex opacity-0 max-h-0 pointer-events-none"
+          }
   md:flex md:opacity-100 md:max-h-none md:pointer-events-auto
   flex-col md:flex-row gap-10 items-center
   w-full md:w-auto px-10
   overflow-hidden transition-all duration-300 ease-in-out`}
->
-
+        >
           {/* HOME */}
           <li className={`${menuItemClass("home")}`}>
             <button
@@ -163,7 +162,7 @@ const Navbar = () => {
 
         <button
           onClick={toggleTheme}
-          className="rounded-full text-teal-600 flex-row hidden md:block cursor-pointer
+          className="rounded-full text-teal-600 flex-row hidden md:block cursor-pointer md:pr-6
 "
         >
           {theme === "dark" ? <MdSunny size={18} /> : <FaMoon size={18} />}

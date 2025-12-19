@@ -52,12 +52,18 @@ const Navbar = () => {
           )}
         </div>
 
-        <ul
-          className={`${
-            isOpen ? "flex" : "hidden"
-          } md:flex flex-col md:flex-row 
-          gap-10 items-center w-full md:w-auto  px-10`}
-        >
+    <ul
+  className={`${
+    isOpen
+      ? "flex opacity-100 max-h-96"
+      : "flex opacity-0 max-h-0 pointer-events-none"
+  }
+  md:flex md:opacity-100 md:max-h-none md:pointer-events-auto
+  flex-col md:flex-row gap-10 items-center
+  w-full md:w-auto px-10
+  overflow-hidden transition-all duration-300 ease-in-out`}
+>
+
           {/* HOME */}
           <li className={`${menuItemClass("home")}`}>
             <button

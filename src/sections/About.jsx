@@ -47,9 +47,9 @@ const About = () => {
               </p>
             </div>
             <div className="   px-2 w-40 h-36 rounded-lg items-center py-2 text-center bg-linear-to-r from-teal-600 via-black to-white">
-              <h1 className="text-5xl text-white">1+</h1>
+              <h1 className="text-5xl text-white">6+</h1>
               <p className="text-sm mt-2 text-white">
-                Years <br />
+                Months of <br />
                 Experience
               </p>
             </div>
@@ -57,7 +57,7 @@ const About = () => {
               className=" px-2 w-40 h-36 rounded-lg items-center py-2 text-center   bg-linear-to-r from-teal-600 via-black to-white
 "
             >
-              <h1 className="text-5xl text-white">7+</h1>
+              <h1 className="text-5xl text-white">2+</h1>
               <p className="text-sm mt-2 text-white">
                 Happy <br />
                 Clients

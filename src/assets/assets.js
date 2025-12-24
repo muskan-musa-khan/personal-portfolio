@@ -12,7 +12,7 @@ import Git from "./Git.svg";
 import github from "./github.svg";
 import cplus from "./C++.svg";
 import Nextjs from "./Next.js.svg";
-
+import database from "./database.png";
 export const projectsData = [
   {
     img: comingsoon,
@@ -46,4 +46,6 @@ export const allSvgs = [
   { img: cplus, title: "C++" },
   { img: python, title: "Python" },
   { img: java, title: "Java" },
+  { img: database, title: "SQL" },
+
 ];

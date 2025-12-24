@@ -1,5 +1,7 @@
 import React, { useContext } from "react";
 import { ThemeContext } from "../context/ThemeContext";
+import whiteGirl from "../assets/whiteformalgirl.png";
+import blackSuit from "../assets/blacksuit.png";
 
 const About = () => {
   const { theme } = useContext(ThemeContext);
@@ -15,45 +17,48 @@ const About = () => {
         </span>
         <hr className="w-20 border-t-4  mt-4 mx-auto" />
       </h1>
-      <div className="flex flex-col lg:flex-row  md:mt-5 lg:gap-20 ">
+      <div className="flex flex-col xl:flex-row  md:mt-5 lg:gap-20 ">
         <div className=" flex flex-col items-center  ">
           <div>
             {theme === "dark" ? (
-              <img
-                src="./src/assets/whitesuitimg.png"
-                alt=""
-                className="lg:h-100 lg:w-100 object-contain lg:pl-6 "
+              
+                <img src={whiteGirl}
+
+                alt="White formals wearing girl"
+                className="h-[400px] w-[400px] object-contain lg:pl-6 lg:pt-14 pl-4 pt-[100px]"
+
               />
             ) : (
-              <img
-                src="./src/assets/blacksuitimg.png"
-                alt=""
-                className="h-100 w-100 object-contain lg:pl-6"
+              <img src={blackSuit}
+
+                alt="black formals wearing girl"
+             className="h-[400px] w-[400px] object-contain lg:pl-6 lg:pt-14 pl-4 pt-[100px]"
+
               />
             )}
           </div>
 
           <div className="flex flex-col sm:flex-row gap-5 justify-center items-center">
-            <div className=" text-white border-3  px-2 w-32 h-30 rounded-lg items-center py-2 text-center  bg-linear-to-r from-teal-600 via-black to-white">
-              <h1 className="text-5xl ">10+</h1>
-              <p className="text-sm mt-2">
+            <div className="   px-2 w-40 h-36 rounded-lg items-center py-2 text-center  bg-linear-to-r from-teal-600 via-black to-white">
+              <h1 className="text-5xl text-white ">10+</h1>
+              <p className="text-sm mt-2 text-white">
                 Projects <br />
                 Completed
               </p>
             </div>
-            <div className="text-white border-3  px-2 w-32 h-30 rounded-lg items-center py-2 text-center bg-linear-to-r from-teal-600 via-black to-white">
-              <h1 className="text-5xl">1+</h1>
-              <p className="text-sm mt-2">
+            <div className="   px-2 w-40 h-36 rounded-lg items-center py-2 text-center bg-linear-to-r from-teal-600 via-black to-white">
+              <h1 className="text-5xl text-white">1+</h1>
+              <p className="text-sm mt-2 text-white">
                 Years <br />
                 Experience
               </p>
             </div>
             <div
-              className="text-white border-3 px-2 w-32 h-30 rounded-lg items-center py-2 text-center   bg-linear-to-r from-teal-600 via-black to-white
+              className=" px-2 w-40 h-36 rounded-lg items-center py-2 text-center   bg-linear-to-r from-teal-600 via-black to-white
 "
             >
-              <h1 className="text-5xl">7+</h1>
-              <p className="text-sm mt-2">
+              <h1 className="text-5xl text-white">7+</h1>
+              <p className="text-sm mt-2 text-white">
                 Happy <br />
                 Clients
               </p>
@@ -61,19 +66,19 @@ const About = () => {
           </div>
         </div>
 
-        <div className="flex-1 text-center lg:text-left  ">
-          <h2 className="text-4xl pt-10 font-semibold">
+        <div className="flex-1 text-center xl:text-left  ">
+          <h2 className="text-4xl xl:pt-22 pt-10 font-semibold">
             Passionate Front-End Developer
           </h2>
           <br /> <br />
-          <p className="text-xl leading-relaxed font-normal lg:text-left">
+          <p className="text-xl leading-loose font-normal xl:text-left xl:text-lg xl:leading-normal 2xl:text-xl 2xl:leading-loose">
             I am a Computer Science graduate with a strong passion for front-end
             web development and creating intuitive, user-centered digital
             experiences. I specialize in building modern, responsive interfaces
             using React, Next.js, Tailwind CSS, HTML, JavaScript, and UI/UX
             design principles, with a focus on performance, accessibility, and
-            clean design. <br />I enjoy transforming design concepts into functional
-            and visually engaging applications while writing clean,
+            clean design. <br /> I enjoy transforming design concepts into
+            functional and visually engaging applications while writing clean,
             maintainable, and scalable code. Alongside front-end development, I
             have a working knowledge of SQL and database concepts, and I
             continuously explore modern front-end technologies and best

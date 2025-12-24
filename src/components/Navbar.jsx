@@ -4,6 +4,7 @@ import { MdSunny } from "react-icons/md";
 import { ThemeContext } from "../context/ThemeContext";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { RxCross2 } from "react-icons/rx";
+import logo2 from "../assets/logo2.png";
 
 const Navbar = () => {
   const { theme, toggleTheme } = useContext(ThemeContext);
@@ -28,7 +29,7 @@ const Navbar = () => {
       >
         <div className="flex flex-row items-center justify-around w-full md:w-auto">
           <img
-            src="./src/assets/logo2.png"
+            src={logo2}
             alt="logo"
             className="h-16 w-20 object-contain mr-30 sm:mr-0"
           />

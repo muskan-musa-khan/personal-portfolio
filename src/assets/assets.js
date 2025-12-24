@@ -6,7 +6,7 @@ import bootstap from "./Bootstrap.svg";
 import Tailwind from "./TailwindCSS.svg";
 import figma from "./Figma.svg";
 import python from "./Python.svg";
-import java from "./java.svg";
+import java from "./Java.svg";
 import react from "./react.svg";
 import Git from "./Git.svg";
 import github from "./github.svg";

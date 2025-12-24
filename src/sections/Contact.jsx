@@ -1,13 +1,13 @@
 import React, { useContext } from "react";
 import { Button } from "@/components/ui/button";
 import { toast } from "react-toastify";
-import ContactSvg from "@/components/ContactSvg"; 
+import ContactSvg from "@/components/ContactSvg";
 import ContactSvgBlack from "@/components/ContactSvgBlack";
 import { ThemeContext } from "../context/ThemeContext";
 
 const Contact = () => {
   const [result, setResult] = React.useState("");
-const { theme } = useContext(ThemeContext);
+  const { theme } = useContext(ThemeContext);
   const onSubmit = async (event) => {
     event.preventDefault();
     setResult("Sending....");
@@ -79,20 +79,17 @@ const { theme } = useContext(ThemeContext);
                 className="border-2 border-teal-900 p-2  rounded-sm"
                 required
               />
-              <Button type ="submit" className="bg-teal-800 text-amber-50 rounded-md text-l  hover:scale-97 mt-2   ">
-              {result ? result : "Send"}
-            </Button>
+              <Button
+                type="submit"
+                className="bg-teal-800 text-amber-50 rounded-md text-l  hover:scale-97 mt-2   "
+              >
+                {result ? result : "Send"}
+              </Button>
             </div>
-            
           </form>
         </div>
         <div className="hidden md:flex w-[50%] lg:w-120  ">
-          {theme === "dark" ? (
-             <ContactSvgBlack  />
-            ) : (
-          <ContactSvg  />
-            )}
-         
+          {theme === "dark" ? <ContactSvgBlack /> : <ContactSvg />}
         </div>
       </div>
     </div>

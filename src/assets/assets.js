@@ -1,6 +1,6 @@
 import comingsoon from "./comingsoon.png";
 import HTML from "./HTML.svg";
-import css from "./CSS.svg"
+import css from "./CSS.svg";
 import javascript from "./JavaScript.svg";
 import bootstap from "./Bootstrap.svg";
 import Tailwind from "./TailwindCSS.svg";
@@ -9,10 +9,12 @@ import python from "./Python.svg";
 import java from "./Java.svg";
 import react from "./react.svg";
 import Git from "./Git.svg";
-import github from "./github.svg";
-import cplus from "./C++.svg";
+import TypeScript from "./TypeScript.svg";
+import csharp from "./csharp.svg";
 import Nextjs from "./Next.js.svg";
 import database from "./database.png";
+import powerbi from "./power-bi-icon.svg";
+
 export const projectsData = [
   {
     img: comingsoon,
@@ -35,17 +37,19 @@ export const allSvgs = [
   { img: HTML, title: "HTML" },
   { img: css, title: "CSS" },
   { img: javascript, title: "JavaScript" },
-  { img: bootstap, title: "Bootstrap" },
+  { img: TypeScript, title: "TypeScript" },
   { img: Tailwind, title: "Tailwind" },
   { img: react, title: "React" },
   { img: figma, title: "Figma" },
   { img: Git, title: "Git" },
-  { img: github, title: "Github" },
-
+  
+  { img: bootstap, title: "Bootstrap" },
   { img: Nextjs, title: "Nextjs" },
-  { img: cplus, title: "C++" },
+  { img: csharp, title: "C#" },
   { img: python, title: "Python" },
   { img: java, title: "Java" },
   { img: database, title: "SQL" },
+  { img: powerbi, title: "Power BI" },
+
 
 ];

@@ -7,9 +7,8 @@ import { FaInstagram } from "react-icons/fa6";
 import { CgMail } from "react-icons/cg";
 import myImg from "../assets/myimg.png";
 const Home = () => {
+  const [, setActive] = useState("home");
 
-    const [, setActive] = useState("home");
-  
   return (
     <>
       <div
@@ -39,20 +38,22 @@ const Home = () => {
           </div>
 
           <p className="md:mt-6 xl:text-xl text-xl leading-relaxed mr-auto xl:mr-40">
-            Turning ideas into interactive digital experiences. Designing
-            interfaces that feel effortless and intuitive. Bringing creativity
-            and clean code together for the web you’ll love to use.
+            Computer Science graduate who spends most of the time building
+            things that live both on the screen and behind it. I somehow got
+            really into cleaning up confusing, messy stuff and turning it into
+            something that actually makes sense. 
           </p>
           <div className="mt-10 flex gap-2 justify-center xl:justify-start ">
-            <Button className="bg-teal-800 text-amber-50 rounded-md text-l border border-amber-50 hover:scale-95 cursor-pointer"
-                          onClick={() => {
+            <Button
+              className="bg-teal-800 text-amber-50 rounded-md text-l border border-amber-50 hover:scale-95 cursor-pointer"
+              onClick={() => {
                 document
                   .getElementById("projects")
                   .scrollIntoView({ behavior: "smooth" });
                 setActive("projects");
               }}
-             >
-              View My Work 
+            >
+              View My Work
             </Button>
             <Button className="bg-white text-teal-900 rounded-md  border-2 border-teal-900 hover:scale-95">
               Download Cv
@@ -61,20 +62,29 @@ const Home = () => {
           <div
             className={`flex mt-8 text-3xl gap-2 justify-center xl:justify-start`}
           >
-            <Button variant="ghost" size="icon">
-              <FaGithub className="hover:scale-110  " />
-            </Button>
-            <Button variant="ghost" size="icon" className="hover:scale-110 ">
-              <FaLinkedin />
-            </Button>
-            <Button
-              variant="ghost"
-              size="icon"
-              className="hover:scale-110 text-4xl"
+            <a href="https://github.com/muskan-musa-khan" target="_blank">
+              <Button variant="ghost" size="icon">
+                <FaGithub className="hover:scale-110  " />{" "}
+              </Button>
+            </a>
+            <a
+              href="https://linkedin.com/in/muskan-musa-khan-2a32a5363"
+              target="_blank"
             >
-              {" "}
-              <CgMail />
-            </Button>
+              <Button variant="ghost" size="icon" className="hover:scale-110 ">
+                <FaLinkedin />
+              </Button>
+            </a>
+            <a href="mailto:muskanmusa.cs@gmail.com">
+              <Button
+                variant="ghost"
+                size="icon"
+                className="hover:scale-110 text-4xl"
+              >
+                {" "}
+                <CgMail />
+              </Button>
+            </a>
             <Button variant="ghost" size="icon" className=" hover:scale-110 ">
               {" "}
               <FaInstagram />

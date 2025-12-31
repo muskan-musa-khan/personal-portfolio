@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { FaMoon } from "react-icons/fa";
 import { MdSunny } from "react-icons/md";
 import { ThemeContext } from "../context/ThemeContext";
@@ -12,6 +12,38 @@ const Navbar = () => {
 
   //  Active link state
   const [active, setActive] = useState("home");
+  useEffect(() => {
+  const sections = [
+    "about",
+    "home",
+    "projects",
+    "education",
+    "skills",
+    "contact",
+  ];
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActive(entry.target.id);
+        }
+      });
+    },
+    {
+      rootMargin: "-50% 0px -50% 0px", // triggers when section is centered
+      threshold: 0, 
+    }
+  );
+
+  sections.forEach((id) => {
+    const section = document.getElementById(id);
+    if (section) observer.observe(section);
+  });
+
+  return () => observer.disconnect();
+}, []);
+
 
   const menuItemClass = (id) =>
     `cursor-pointer transition-all duration-300 hover:text-teal-400 hover:scale-110 

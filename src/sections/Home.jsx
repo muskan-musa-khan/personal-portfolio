@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { ReactTyped } from "react-typed";
 import { Button } from "@/components/ui/button";
 import { FaGithub } from "react-icons/fa";
@@ -6,8 +6,10 @@ import { FaLinkedin } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa6";
 import { CgMail } from "react-icons/cg";
 import myImg from "../assets/myimg.png";
-
 const Home = () => {
+
+    const [, setActive] = useState("home");
+  
   return (
     <>
       <div
@@ -29,7 +31,7 @@ const Home = () => {
           <div className="mt-6 ">
             <ReactTyped
               className="text-3xl font-semibold"
-              strings={["Frontend Developer", "UI/UX Designer", "CS Graduate"]}
+              strings={["Software Developer", "Data Analyst", "CS Graduate"]}
               typeSpeed={60}
               backSpeed={40}
               loop
@@ -42,8 +44,15 @@ const Home = () => {
             and clean code together for the web you’ll love to use.
           </p>
           <div className="mt-10 flex gap-2 justify-center xl:justify-start ">
-            <Button className="bg-teal-800 text-amber-50 rounded-md text-l border border-amber-50 hover:scale-95">
-              View My Work
+            <Button className="bg-teal-800 text-amber-50 rounded-md text-l border border-amber-50 hover:scale-95 cursor-pointer"
+                          onClick={() => {
+                document
+                  .getElementById("projects")
+                  .scrollIntoView({ behavior: "smooth" });
+                setActive("projects");
+              }}
+             >
+              View My Work 
             </Button>
             <Button className="bg-white text-teal-900 rounded-md  border-2 border-teal-900 hover:scale-95">
               Download Cv

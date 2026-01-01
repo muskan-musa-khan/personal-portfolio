@@ -25,32 +25,32 @@ export const projectsData = [
   {
     img: equityedge,
     title: "Equity Edge & Legal",
-    desc: "Developed an animated portfolio website using Next.js with smooth interactive effects and responsive design.",
+    desc: "Designed and developed a law firm website using Next.js and TypeScript, with responsive layouts, clear content structure, and straightforward navigation for legal services.",
   },
   {
     img: realestate,
     title: "Real Estate Website",
-    desc: "Developed an animated portfolio website using Next.js with smooth interactive effects and responsive design.",
+    desc: "Developed the frontend of a real estate website using React and JavaScript, focusing on layout structure, property listing views, and responsive page behavior.",
   },
   {
     img: portfolio,
     title: "Portfolio",
-    desc: "Developed an animated portfolio website using Next.js with smooth interactive effects and responsive design.",
+    desc: "Designed and Built a responsive, developer-focused portfolio using React and JavaScript, with clear sectioning and consistent layout across all devices and screens.  ",
   },
   {
     img: powerbidashboard,
     title: "Power BI Dashboard",
-    desc: "Developed an animated portfolio website using Next.js with smooth interactive effects and responsive design.",
+    desc: "Designed a MySQL database for blog articles, authors, comments, and metadata, and created a Power BI report with slicers and visualizations to analyze content by author, date, and genre.",
   },
   {
     img: smarthome,
     title: "Smart Home App",
-    desc: "Developed an animated portfolio website using Next.js with smooth interactive effects and responsive design.",
+    desc: "Built a Java command-line application for smart home management, supporting device control, room status tracking, and basic system interaction through the CLI.",
   },
   {
     img: comingsoon,
-    title: "project title",
-    desc: "Developed an animated portfolio website using Next.js with smooth interactive effects and responsive design.",
+    title: "Coming Soon",
+    desc: "This project is Coming Soon...",
   },
 ];
 
@@ -63,7 +63,7 @@ export const allSvgs = [
   { img: react, title: "React" },
   { img: figma, title: "Figma" },
   { img: Git, title: "Git" },
-  
+
   { img: bootstap, title: "Bootstrap" },
   { img: Nextjs, title: "Nextjs" },
   { img: csharp, title: "C#" },
@@ -71,6 +71,4 @@ export const allSvgs = [
   { img: java, title: "Java" },
   { img: database, title: "SQL" },
   { img: powerbi, title: "Power BI" },
-
-
 ];

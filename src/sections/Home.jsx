@@ -6,8 +6,12 @@ import { FaLinkedin } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa6";
 import { CgMail } from "react-icons/cg";
 import myImg from "../assets/myimg.png";
+import Loader from "../components/Loader";
+
 const Home = () => {
   const [, setActive] = useState("home");
+    const [loaded, setLoaded] = useState(false);
+  
 
   return (
     <>
@@ -37,7 +41,7 @@ const Home = () => {
             />
           </div>
 
-          <p className="md:mt-6 xl:text-xl text-xl leading-relaxed mr-auto xl:mr-40">
+          <p className="md:mt-6 xl:text-xl text-xl leading-relaxed mr-auto xl:mr-50">
             Computer Science graduate who spends most of the time building
             things that live both on the screen and behind it. I somehow got
             really into cleaning up confusing, messy stuff and turning it into
@@ -93,10 +97,10 @@ const Home = () => {
         </div>
         <div className="md:mt-12">
           <div className=" flex w-88 h-88 lg:w-96 lg:h-96   rounded-full p-1 bg-linear-to-tr from-teal-400 to-teal-700 shrink-0 mt-20 md:mt-0">
-            <img
+            <img onLoad={()=>setLoaded(true)} loading="lazy"
               src={myImg}
-              className="w-auto h-auto rounded-full object-cover border-8 border-teal-800
-              hover:scale-110 hover:shadow-[0_0_40px_#14b8a6] transition duration-500 "
+              className={`w-auto h-auto rounded-full object-cover border-8 border-teal-800
+              hover:scale-110 hover:shadow-[0_0_40px_#14b8a6] transition duration-500 ${loaded ? "opacity-100" : "opacity-0"}` }
               alt="Muskan profile picture"
             />
           </div>

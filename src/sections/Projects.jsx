@@ -16,7 +16,7 @@ const Projects = () => {
       </h1>
       <br />
       <br /> <br />
-      <div className="flex flex-wrap justify-around lg:justify-between gap-5 lg:pt-15">
+      <div className="flex flex-wrap justify-around lg:justify-center  gap-10 lg:pt-15 ">
         {projectsData.map((projects, index) => (
           <div
             key={index}
@@ -25,7 +25,7 @@ const Projects = () => {
             <img
               src={projects.img}
               alt={projects.title}
-              className="w-80 h-60 object-cover mx-auto mb-4 rounded-lg"
+              className="w-80 h-60 object-fill mx-auto mb-4 rounded-lg"
             />
             <h2 className="text-xl font-medium">{projects.title}</h2>
             <p className="text-sm mt-2">{projects.desc}</p>

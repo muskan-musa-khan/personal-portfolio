@@ -15,20 +15,41 @@ import Nextjs from "./Next.js.svg";
 import database from "./database.png";
 import powerbi from "./power-bi-icon.svg";
 
+import equityedge from "./equityedge.png";
+import realestate from "./realestate.png";
+import portfolio from "./portfolio.png";
+import powerbidashboard from "./powerbi_dashboard.png";
+import smarthome from "./smart_home.png";
+
 export const projectsData = [
   {
-    img: comingsoon,
-    title: "Project Title",
+    img: equityedge,
+    title: "Equity Edge & Legal",
+    desc: "Developed an animated portfolio website using Next.js with smooth interactive effects and responsive design.",
+  },
+  {
+    img: realestate,
+    title: "Real Estate Website",
+    desc: "Developed an animated portfolio website using Next.js with smooth interactive effects and responsive design.",
+  },
+  {
+    img: portfolio,
+    title: "Portfolio",
+    desc: "Developed an animated portfolio website using Next.js with smooth interactive effects and responsive design.",
+  },
+  {
+    img: powerbidashboard,
+    title: "Power BI Dashboard",
+    desc: "Developed an animated portfolio website using Next.js with smooth interactive effects and responsive design.",
+  },
+  {
+    img: smarthome,
+    title: "Smart Home App",
     desc: "Developed an animated portfolio website using Next.js with smooth interactive effects and responsive design.",
   },
   {
     img: comingsoon,
-    title: "Project Title",
-    desc: "Developed an animated portfolio website using Next.js with smooth interactive effects and responsive design.",
-  },
-  {
-    img: comingsoon,
-    title: "Project Title",
+    title: "project title",
     desc: "Developed an animated portfolio website using Next.js with smooth interactive effects and responsive design.",
   },
 ];

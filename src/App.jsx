@@ -8,9 +8,18 @@ import Education from "./sections/Education";
 import Skills from "./sections/Skills";
 import Contact from "./sections/Contact";
 import { ToastContainer } from "react-toastify";
-
+import { useState, useEffect } from "react";
+import Loader from "./components/Loader";
 const App = () => {
   const { theme } = useContext(ThemeContext);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setLoading(false), 3000); // 3000ms = 3s
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) return <Loader />;
   return (
     <div
       className={`h-absolute overflow-hidden w-screen 

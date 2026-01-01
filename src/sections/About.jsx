@@ -17,23 +17,20 @@ const About = () => {
         </span>
         <hr className="w-20 border-t-4  mt-4 mx-auto" />
       </h1>
-      <div className="flex flex-col xl:flex-row  md:mt-5 lg:gap-20 ">
+      <div className="flex flex-col xl:flex-row  md:mt-5 lg:gap-20  ">
         <div className=" flex flex-col items-center  ">
           <div>
             {theme === "dark" ? (
-              
-                <img src={whiteGirl}
-
+              <img
+                src={whiteGirl}
                 alt="White formals wearing girl"
                 className="h-[400px] w-[400px] object-contain lg:pl-6 lg:pt-14 pl-4 pt-[100px]"
-
               />
             ) : (
-              <img src={blackSuit}
-
+              <img
+                src={blackSuit}
                 alt="black formals wearing girl"
-             className="h-[400px] w-[400px] object-contain lg:pl-6 lg:pt-14 pl-4 pt-[100px]"
-
+                className="h-[400px] w-[400px] object-contain lg:pl-6 lg:pt-14 pl-4 pt-[100px]"
               />
             )}
           </div>
@@ -66,24 +63,27 @@ const About = () => {
           </div>
         </div>
 
-        <div className="flex-1 text-center xl:text-left  ">
-          <h2 className="text-4xl xl:pt-22 pt-10 font-semibold">
-            Passionate Front-End Developer
+        <div className="flex-1 text-center xl:text-left">
+          <h2 className="text-4xl pt-10 font-semibold ">
+            How I Like To Spend My Time?
           </h2>
           <br /> <br />
-          <p className="text-xl leading-loose font-normal xl:text-left xl:text-lg xl:leading-normal 2xl:text-xl 2xl:leading-loose">
-            I am a Computer Science graduate with a strong passion for front-end
-            web development and creating intuitive, user-centered digital
-            experiences. I specialize in building modern, responsive interfaces
-            using React, Next.js, Tailwind CSS, HTML, JavaScript, and UI/UX
-            design principles, with a focus on performance, accessibility, and
-            clean design. <br /> I enjoy transforming design concepts into
-            functional and visually engaging applications while writing clean,
-            maintainable, and scalable code. Alongside front-end development, I
-            have a working knowledge of SQL and database concepts, and I
-            continuously explore modern front-end technologies and best
-            practices to build seamless, interactive, and accessible
-            applications that deliver meaningful user experiences.
+          <p className="text-xl leading-loose font-normal xl:text-left xl:text-lg xl:leading-relaxed 2xl:text-xl 2xl:leading-loose ">
+            I'm a CS grad who enjoys building full-stack web apps and making
+            sense of the data behind them. I mainly work with React, Next.js,
+            JavaScript, Tailwind CSS, and HTML to build clean, responsive
+            interfaces that feel simple and easy to use. On the backend and data
+            side, I work with SQL databases, writing joins, filters, and
+            aggregations, and connect apps to REST APIs to handle real data
+            instead of just static pages. <br />I've also built Power BI dashboards
+            where I clean data, create calculated fields, and design reports for
+            sales, profit, categories, and state-wise performance so numbers
+            tell a story. I like taking a project from UI to API to database,
+            making sure everything works together properly. I keep my code
+            readable, avoid over-complicating things, and enjoy improving apps
+            based on real usage and feedback. I'm always learning new tools, but
+            mostly focus on building stuff that works well, loads fast, and
+            makes sense to users.
           </p>
         </div>
       </div>

@@ -1,6 +1,7 @@
 import React from "react";
 import { projectsData } from "../assets/assets.js";
 import { FaArrowUpRightFromSquare } from "react-icons/fa6";
+import {toast} from "react-toastify";
 const Projects = () => {
   return (
     <div id={"projects"} className=" min-h-screen  lg:px-32  p-5">
@@ -34,13 +35,19 @@ const Projects = () => {
             {/* Hover Overlay */}
             <div
               className="absolute bottom-0 left-0 w-full h-0 bg-linear-to-br from-black via-gray-900 to-teal-900
- flex items-center justify-center opacity-0 
+      flex items-center justify-center opacity-0 
                     group-hover:h-full group-hover:opacity-100 transition-all duration-500"
             >
               <a
                 href={projects.link || "#"}
                 target="_blank"
                 className="text-xl font-bold text-white hover:text-gray-400 transition flex items-center gap-2"
+                onClick={(e) => {
+                  if (projects.link === "#") {
+                    e.preventDefault();
+                    toast.error("Live preview unavailable!");
+                  }
+                }}
               >
                 <FaArrowUpRightFromSquare />
                 Live Preview

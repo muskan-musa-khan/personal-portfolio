@@ -32,6 +32,7 @@ export const projectsData = [
     img: realestate,
     title: "Real Estate Website",
     desc: "Developed the frontend of a real estate website using React and JavaScript, focusing on layout structure, property listing views, and responsive page behavior.",
+    link: "#",
   },
   {
     img: portfolio,
@@ -55,6 +56,7 @@ export const projectsData = [
     img: comingsoon,
     title: "Coming Soon",
     desc: "This project is Coming Soon...",
+    link: "#",
   },
 ];
 

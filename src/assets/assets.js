@@ -26,6 +26,7 @@ export const projectsData = [
     img: equityedge,
     title: "Equity Edge & Legal",
     desc: "Designed and developed a law firm website using Next.js and TypeScript, with responsive layouts, clear content structure, and straightforward navigation for legal services.",
+    link: "https://equity-edge-legal.vercel.app/",
   },
   {
     img: realestate,
@@ -36,16 +37,19 @@ export const projectsData = [
     img: portfolio,
     title: "Portfolio",
     desc: "Designed and Built a responsive, developer-focused portfolio using React and JavaScript, with clear sectioning and consistent layout across all devices and screens.  ",
+    link: "https://muskan-musa-khan.vercel.app/",
   },
   {
     img: powerbidashboard,
     title: "Power BI Dashboard",
     desc: "Designed a MySQL database for blog articles, authors, comments, and metadata, and created a Power BI report with slicers and visualizations to analyze content by author, date, and genre.",
+    link: "https://github.com/muskan-musa-khan/blog-management-dashboard",
   },
   {
     img: smarthome,
     title: "Smart Home App",
     desc: "Built a Java command-line application for smart home management, supporting device control, room status tracking, and basic system interaction through the CLI.",
+    link: "#",
   },
   {
     img: comingsoon,

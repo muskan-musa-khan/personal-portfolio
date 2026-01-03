@@ -4,7 +4,7 @@ import "./index.css";
 import App from "./App.jsx";
 import { Analytics } from "@vercel/analytics/react"
 import { BrowserRouter } from "react-router-dom";
-import { ThemeProvider } from "./context/ThemeProvider.jsx"; // if the file is ThemeProvider.jsx
+import { ThemeProvider } from "./context/ThemeProvider.jsx";
 
 createRoot(document.getElementById("root")).render(
   <ThemeProvider>

@@ -1,4 +1,4 @@
-import comingsoon from "./comingsoon.png";
+
 import HTML from "./HTML.svg";
 import css from "./CSS.svg";
 import javascript from "./JavaScript.svg";
@@ -20,7 +20,7 @@ import realestate from "./realestate.png";
 import portfolio from "./portfolio.png";
 import powerbidashboard from "./powerbi_dashboard.png";
 import smarthome from "./smart_home.png";
-
+import weddingplatform from "./wedding_platform.png"
 export const projectsData = [
   {
     img: equityedge,
@@ -28,12 +28,7 @@ export const projectsData = [
     desc: "Designed and developed a law firm website using Next.js and TypeScript, with responsive layouts, clear content structure, and straightforward navigation for legal services.",
     link: "https://equity-edge-legal.vercel.app/",
   },
-  {
-    img: realestate,
-    title: "Real Estate Website",
-    desc: "Developed the frontend of a real estate website using React and JavaScript, focusing on layout structure, property listing views, and responsive page behavior.",
-    link: "#",
-  },
+ 
   {
     img: portfolio,
     title: "Portfolio",
@@ -53,9 +48,15 @@ export const projectsData = [
     link: "#",
   },
   {
-    img: comingsoon,
-    title: "Coming Soon",
-    desc: "This project is Coming Soon...",
+    img: weddingplatform,
+    title: "Wedding Platform",
+    desc: "Built a wedding planning platform using Next.js to simplify wedding planning and vendor discovery, helping organize events efficiently and connect with trusted vendors seamlessly.",
+    link: "#",
+  },
+   {
+    img: realestate,
+    title: "Real Estate Website",
+    desc: "Developed the frontend of a real estate website using React and JavaScript, focusing on layout structure, property listing views, and responsive page behavior.",
     link: "#",
   },
 ];

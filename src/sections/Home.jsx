@@ -6,7 +6,6 @@ import { FaLinkedin } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa6";
 import { CgMail } from "react-icons/cg";
 import myImg from "../assets/myimg.png";
-import Loader from "../components/Loader";
 
 const Home = () => {
   const [, setActive] = useState("home");

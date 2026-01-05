@@ -21,12 +21,12 @@ A personal portfolio website built with React and Tailwind CSS that presents pro
 
 ### Clone the repository
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/muskan-musa-khan/personal-portfolio.git
 ```
 
 ### Move into the project folder
 ```bash
-cd <project-folder-name>
+cd personal-portfolio
 ```
 ### Install dependencies
 ```bash

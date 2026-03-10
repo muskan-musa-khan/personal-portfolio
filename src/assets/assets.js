@@ -20,7 +20,7 @@ import realestate from "./realestate.png";
 import portfolio from "./portfolio.png";
 import powerbidashboard from "./powerbi_dashboard.png";
 import smarthome from "./smart_home.png";
-import weddingplatform from "./wedding_platform.png"
+
 export const projectsData = [
   {
     img: equityedge,
@@ -47,12 +47,7 @@ export const projectsData = [
     desc: "Built a Java command-line application for smart home management, supporting device control, room status tracking, and basic system interaction through the CLI.",
     link: "#",
   },
-  {
-    img: weddingplatform,
-    title: "Wedding Platform",
-    desc: "Built a wedding planning platform using Next.js to simplify wedding planning and vendor discovery, helping organize events efficiently and connect with trusted vendors seamlessly.",
-    link: "#",
-  },
+  
    {
     img: realestate,
     title: "Real Estate Website",
